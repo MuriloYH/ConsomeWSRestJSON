@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SalvarLivroActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_salvar_livro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar_livro_descricao"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:paddingStart="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/titulo_text_view"
+                />
+            <EditText
+                android:id="@+id/tituloEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:hint="@string/titulo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/autor_text_view"
+                />
+            <EditText
+                android:id="@+id/autorEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:hint="@string/autor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/NumeroPaginas_text_view"
+                />
+            <EditText
+                android:id="@+id/nPaginasEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:hint="@string/NumeroPaginas"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/edicao_text_view"
+                />
+            <EditText
+                android:id="@+id/edicaoEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:hint="@string/edicao"
+                />
+        </GridLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_check_black_24dp"
+        android:onClick="sendLivro"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

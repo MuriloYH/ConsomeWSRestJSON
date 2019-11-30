@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ConsomeWSRestJSON</string>
+    <string name="action_settings">Settings</string>
+    <string name="host_address">http://192.168.0.105</string>
+    <string name="host_port">:9090</string>
+    <string name="endpoint_base">/livros</string>
+    <string name="endpoint_listar">/listar</string>
+    <string name="endpoint_salvar">/salvar</string>
+    <string name="endpoint_buscar_por_id">/%d</string>
+    <string name="titulo_text_view">Título</string>
+    <string name="autor_text_view">Autor</string>
+    <string name="NumeroPaginas_text_view">Numero de Páginas</string>
+    <string name="edicao_text_view">Edição</string>
+    <string name="titulo">Digite o Título</string>
+    <string name="autor">Digite o Autor</string>
+    <string name="NumeroPaginas">Digite o Numero de Páginas</string>
+    <string name="edicao">Digite a Edição</string>
+    <string name="salvar_livro_descricao">Salvar Livros</string>
+    <string name="title_activity_salvar_livro">SalvarLivroActivity</string>
+</resources>
